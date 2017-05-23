@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>jonem</display-name>
+  <servlet>
+    <servlet-name>ControlerServlet</servlet-name>
+    <servlet-class>com.jone.ControlerServlet</servlet-class>
+	<init-param>  	
+	       <param-name>LoginAction</param-name>  
+	       <param-value>com.jone.LoginAction</param-value>  
+	</init-param> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControlerServlet</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetJsonData</servlet-name>
+    <servlet-class>com.jone.GetJsonData</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExampServlet</servlet-name>
+    <servlet-class>com.jone.ExampServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <display-name>上传下载</display-name>
+    <description> 上传下载Servlet</description>
+    <servlet-class>com.file.UploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadHandleServletStronger</servlet-name>
+    <display-name>上传下载stronger</display-name>
+    <description> 上传下载ServletOfStronger</description>
+    <servlet-class>com.file.UploadHandleServletStronger</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <display-name>下载</display-name>
+    <description>下载Servlet</description>
+    <servlet-class>com.file.DownLoadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListFileServlet</servlet-name>
+    <display-name>文件列表</display-name>
+    <description>下载文件列表Servlet</description>
+    <servlet-class>com.file.ListFileServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>GetJsonData</servlet-name>
+    <url-pattern>/servlet/GetJsonData</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExampServlet</servlet-name>
+    <url-pattern>/servlet/ExampServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <url-pattern>/servlet/UploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHandleServletStronger</servlet-name>
+    <url-pattern>/servlet/UploadHandleServletStronger</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <url-pattern>/servlet/DownLoadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListFileServlet</servlet-name>
+    <url-pattern>/servlet/ListFileServlet</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>jsp/login.jsp</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+
+</web-app>
